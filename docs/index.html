@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hey, I am Dominik, welcome to my website.">
+    <meta name="description" content="Dominik Sammet - physics, knowledge graphs, machine learning, and intelligent systems.">
     <title>Dominik Sammet | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <nav class="nav-content" aria-label="Main navigation">
-            <a class="logo" href="#home">YN<span>.</span></a>
+            <a class="logo" href="#home">DS<span>.</span></a>
             <ul class="nav-links">
                 <li><a href="#cv">CV</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#papers">Papers</a></li>
                 <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#dog-tax">Dog tax</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -22,14 +25,22 @@
 
     <main>
         <section class="hero" id="home">
-            <p class="eyebrow">Hello, my name is</p>
-            <h1>Dominik Sammet.</h1>
-            <h2>I enjoy building and learning new things.</h2>
-            <p class="hero-description">
-                Welcome to my personal website. Here you can learn about my
-                experience, the projects I have built, and what I enjoy outside work.
-            </p>
-            <a class="button" href="#projects">See my projects</a>
+            <div class="hero-content">
+                <div class="hero-copy">
+                    <p class="eyebrow">Hello, my name is</p>
+                    <h1>Dominik Sammet.</h1>
+                    <h2>Physics, knowledge graphs, and intelligent systems.</h2>
+                    <p class="hero-description">
+                        I am a PhD candidate working on reasoning over knowledge graphs,
+                        with a background in theoretical physics, machine learning, and RAG systems.
+                    </p>
+                    <a class="button" href="#projects">See my projects</a>
+                </div>
+                <figure class="profile-picture">
+                    <img src="images/profile-placeholder.svg" alt="Portrait placeholder for Dominik Sammet">
+                    <figcaption>Replace with your portrait</figcaption>
+                </figure>
+            </div>
         </section>
 
         <section id="cv">
@@ -40,14 +51,19 @@
                     <h3 class="column-title">Experience</h3>
                     <div class="timeline">
                         <article class="timeline-item">
-                            <p class="timeline-date">2024 – Present</p>
-                            <h3>Your role · Company</h3>
-                            <p>Briefly describe your responsibilities and what you achieved.</p>
+                            <p class="timeline-date">Mar 2025 - Present</p>
+                            <h3>Student Assistant · University of Regensburg</h3>
+                            <p>Developed a RAG chatbot for TRR374 to improve automated knowledge retrieval in kidney research.</p>
                         </article>
                         <article class="timeline-item">
-                            <p class="timeline-date">2022 – 2024</p>
-                            <h3>Previous role · Company</h3>
-                            <p>Add another relevant job, internship, or volunteering experience.</p>
+                            <p class="timeline-date">Nov 2023 - Nov 2024</p>
+                            <h3>Student Assistant · Theoretical Physics</h3>
+                            <p>Implemented numerical simulations of the Hubbard model and contributed to research on quantum correlations.</p>
+                        </article>
+                        <article class="timeline-item">
+                            <p class="timeline-date">Oct 2022 - Mar 2023</p>
+                            <h3>Working Student · Continental Automotive</h3>
+                            <p>Assembled, flashed, and tested airbag ECUs while supporting quality assurance and safety compliance.</p>
                         </article>
                     </div>
                 </div>
@@ -56,25 +72,78 @@
                     <h3 class="column-title">Education</h3>
                     <div class="timeline">
                         <article class="timeline-item">
-                            <p class="timeline-date">2021 – 2024</p>
-                            <h3>Degree or qualification</h3>
-                            <p>School or university · Add a useful detail about your studies.</p>
+                            <p class="timeline-date">Feb 2026 - Present</p>
+                            <h3>PhD Candidate · BMW Group / LMU Munich</h3>
+                            <p>Researching reasoning on knowledge graphs.</p>
+                        </article>
+                        <article class="timeline-item">
+                            <p class="timeline-date">Oct 2023 - Feb 2026</p>
+                            <h3>M.Sc. Physics · University of Regensburg</h3>
+                            <p>Thesis: “Correlation Transformer for Off-Diagonal Observables” · Grade: 1.0</p>
+                        </article>
+                        <article class="timeline-item">
+                            <p class="timeline-date">Oct 2019 - Oct 2023</p>
+                            <h3>B.Sc. Physics · University of Regensburg</h3>
+                            <p>Thesis: “Implementation of a Hamiltonian Learning Algorithm on a Hubbard Plaquette” · Grade: 1.4</p>
                         </article>
                     </div>
+
                     <h3 class="column-title skills-title">Skills</h3>
                     <ul class="skills" aria-label="Skills">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>PyTorch</li>
+                        <li>pandas</li>
+                        <li>scikit-learn</li>
+                        <li>Machine Learning</li>
+                        <li>RAG</li>
+                        <li>AI Agents</li>
+                        <li>LLM Tool Use</li>
+                        <li>Agentic Workflows</li>
+                        <li>Knowledge Graphs</li>
+                        <li>Graph Reasoning</li>
+                        <li>Docker</li>
+                        <li>Linux</li>
                         <li>Git</li>
-                        <li>Problem solving</li>
+                        <li>LaTeX</li>
+                        <li>FreeCAD</li>
+                        <li>3D Printing</li>
                     </ul>
                 </div>
             </div>
         </section>
 
+        <section id="papers">
+            <p class="section-label">02 / Papers</p>
+            <h2 class="section-title">Research and publications</h2>
+            <article class="paper">
+                <div class="paper-details">
+                    <p class="paper-meta">Year · Publishing venue</p>
+                    <h3>Your paper title</h3>
+                    <p class="paper-authors">Dominik Sammet · Co-author Name</p>
+                    <p class="paper-description">
+                        Add a short, accessible description of the paper's main question,
+                        method, and result. Two or three sentences are usually enough.
+                    </p>
+                    <ul class="tag-list">
+                        <li>Machine Learning</li>
+                        <li>Physics</li>
+                        <li>Knowledge Graphs</li>
+                    </ul>
+                    <div class="paper-links">
+                        <a class="button" href="#" target="_blank" rel="noopener noreferrer">Repository ↗</a>
+                        <a class="button button-secondary" href="#" target="_blank" rel="noopener noreferrer">Publication ↗</a>
+                    </div>
+                </div>
+                <figure class="paper-figure">
+                    <img src="images/papers/paper-figure.png" alt="Central figure from the paper" loading="lazy">
+                    <figcaption>Replace this with a short explanation of the central figure.</figcaption>
+                </figure>
+            </article>
+        </section>
+
         <section id="projects">
-            <p class="section-label">02 / Projects</p>
+            <p class="section-label">03 / Projects</p>
             <h2 class="section-title">Things I have built</h2>
             <div class="card-grid">
                 <article class="card">
@@ -84,7 +153,7 @@
                     </div>
                     <h3>Project One</h3>
                     <p>Explain the problem this project solves and what you contributed.</p>
-                    <ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                    <ul class="tag-list"><li>Python</li><li>RAG</li><li>AI Agents</li></ul>
                 </article>
                 <article class="card">
                     <div class="card-top">
@@ -93,29 +162,116 @@
                     </div>
                     <h3>Project Two</h3>
                     <p>Add a concise description of another project you are proud of.</p>
-                    <ul class="tag-list"><li>Python</li><li>API</li></ul>
+                    <ul class="tag-list"><li>Python</li><li>PyTorch</li></ul>
                 </article>
             </div>
         </section>
 
         <section id="hobbies">
-            <p class="section-label">03 / Hobbies</p>
+            <p class="section-label">04 / Hobbies</p>
             <h2 class="section-title">Away from the keyboard</h2>
             <div class="card-grid hobby-grid">
-                <article class="card"><span class="hobby-icon" aria-hidden="true">◉</span><h3>Your first hobby</h3><p>Share what you enjoy about it and why it matters to you.</p></article>
-                <article class="card"><span class="hobby-icon" aria-hidden="true">△</span><h3>Your second hobby</h3><p>A small personal detail makes your portfolio more memorable.</p></article>
-                <article class="card"><span class="hobby-icon" aria-hidden="true">◇</span><h3>Your third hobby</h3><p>This could be a sport, music, travel, reading, or anything else.</p></article>
+                <article class="card">
+                    <svg class="hobby-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 20 17.5 6.5l-4-4L0 16v4h4Z"/>
+                        <path d="m12 4 4 4m2-3 3 3m-5 0 2-3 3 3-3 2m-14 6 4 4"/>
+                    </svg>
+                    <h3>Woodworking</h3>
+                    <p>Designing and building useful objects from wood, from the first sketch to the final finish.</p>
+                    <div class="hobby-gallery" aria-label="Woodworking photos">
+                        <figure>
+                            <img src="images/hobbies/vinyl_stand.png" alt="Add a description of your first woodworking photo" loading="lazy">
+                            <figcaption>A shelf for storing vinyl.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/hobbies/bedside_stand.jpg" alt="Add a description of your second woodworking photo" loading="lazy">
+                            <figcaption>A small bedside stand.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/hobbies/garden_basket.jpeg" alt="Add a description of your first woodworking photo" loading="lazy">
+                            <figcaption>A gardening basket for picking fruits and vegies.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/hobbies/railing.jpeg" alt="Add a description of your first woodworking photo" loading="lazy">
+                            <figcaption>A handrail for the attic.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/hobbies/flower_stand.jpeg" alt="Add a description of your first woodworking photo" loading="lazy">
+                            <figcaption>A Simple flower stand.</figcaption>
+                        </figure>
+                        
+                    </div>
+                </article>
+                <article class="card">
+                    <svg class="hobby-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m3 20 6-10 3 5 3-4 6 9H3Z"/>
+                        <path d="m7.5 12.5 1.5 1 1.5-1M15 11l1.5 2 1.5-1"/>
+                        <circle cx="18" cy="5" r="2"/>
+                    </svg>
+                    <h3>Hiking</h3>
+                    <p>Exploring mountain trails, spending time outside, and finding the best view at the end of a climb.</p>
+                    <div class="hobby-gallery" aria-label="Hiking photos">
+                        <figure>
+                            <img src="images/hobbies/hobby-placeholder.svg" alt="Add a description of your first hiking photo" loading="lazy">
+                            <figcaption>Add a caption.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/hobbies/hobby-placeholder.svg" alt="Add a description of your second hiking photo" loading="lazy">
+                            <figcaption>Add a caption.</figcaption>
+                        </figure>
+                    </div>
+                </article>
+                <article class="card">
+                    <svg class="hobby-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14.7 6.3a4 4 0 0 0-5-5l2.1 2.1-2.4 2.4-2.1-2.1a4 4 0 0 0 5 5L20 16.4a2.1 2.1 0 0 1-3 3l-7.7-7.7a4 4 0 0 0-5 5l2.1-2.1 2.4 2.4-2.1 2.1a4 4 0 0 0 5-5"/>
+                    </svg>
+                    <h3>Tinkering</h3>
+                    <p>Taking things apart, experimenting with ideas, and turning small technical problems into working solutions.</p>
+                    <div class="hobby-gallery" aria-label="Tinkering photos">
+                        <figure>
+                            <img src="images/hobbies/hobby-placeholder.svg" alt="Add a description of your first tinkering photo" loading="lazy">
+                            <figcaption>Add a caption.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/hobbies/hobby-placeholder.svg" alt="Add a description of your second tinkering photo" loading="lazy">
+                            <figcaption>Add a caption.</figcaption>
+                        </figure>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="dog-tax">
+            <p class="section-label">05 / Dog tax</p>
+            <h2 class="section-title">Cute Animals</h2>
+            <p class="gallery-introduction">A small collection of my favorite pictures of animals.</p>
+            <div class="animal-gallery">
+                <figure class="animal-photo">
+                    <img src="images/animals/donkey.jpg" alt="Animal Picture" loading="lazy">
+                </figure>
+                <figure class="animal-photo">
+                    <img src="images/animals/harry_sally.jpeg" alt="Animal Picture" loading="lazy">
+                </figure>
+                <figure class="animal-photo">
+                    <img src="images/animals/lucy.jpeg" alt="Animal Picture" loading="lazy">
+                </figure>
             </div>
         </section>
 
         <section class="contact" id="contact">
-            <p class="section-label">04 / Contact</p>
+            <p class="section-label">06 / Contact</p>
             <h2 class="section-title">Let’s connect</h2>
             <p>If you would like to talk about a project or simply say hello, send me a message.</p>
-            <a class="button" href="mailto:you@example.com">you@example.com</a>
+            <a class="button" href="mailto:dominik.sammet.contact@proton.me">Contact</a>
         </section>
     </main>
 
-    <footer><p>Built by Your Name · Hosted on GitHub Pages</p></footer>
+    <dialog class="lightbox" aria-label="Expanded image">
+        <button class="lightbox-close" type="button" aria-label="Close expanded image">×</button>
+        <img src="" alt="">
+        <p class="lightbox-caption"></p>
+    </dialog>
+
+    <footer><p>Built by Dominik Sammet · Hosted on GitHub Pages</p></footer>
 </body>
 </html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title description">
+  <title id="title">Hobby photo placeholder</title>
+  <desc id="description">A placeholder showing where a hobby photograph can be added.</desc>
+  <rect width="600" height="600" fill="#0d1117"/>
+  <rect x="55" y="55" width="490" height="490" rx="30" fill="#161b22" stroke="#30363d" stroke-width="8"/>
+  <circle cx="220" cy="220" r="48" fill="none" stroke="#58a6ff" stroke-width="14"/>
+  <path d="m115 455 125-135 72 74 64-86 109 147H115Z" fill="none" stroke="#58a6ff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="300" y="525" fill="#9ba7b4" font-family="system-ui, sans-serif" font-size="26" text-anchor="middle">ADD PHOTO</text>
+</svg>

@@ -24,6 +24,10 @@ a { color: inherit; text-decoration: none; }
 
 main section { max-width: var(--max-width); margin: 0 auto; padding: 6rem 1.5rem; scroll-margin-top: 4.5rem; }
 .hero { display: flex; min-height: calc(100vh - 4.5rem); flex-direction: column; align-items: flex-start; justify-content: center; }
+.hero-content { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(240px, 0.55fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; width: 100%; }
+.profile-picture { position: relative; overflow: hidden; width: min(100%, 340px); justify-self: center; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; box-shadow: 18px 18px 0 rgb(88 166 255 / 12%); }
+.profile-picture img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.profile-picture figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 0.65rem 1rem; color: var(--muted); background: rgb(13 17 23 / 85%); text-align: center; font-size: 0.8rem; backdrop-filter: blur(8px); }
 .eyebrow, .section-label, .timeline-date, .tag-list { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
 .eyebrow { margin-bottom: 1rem; }
 .hero h1 { font-size: clamp(3rem, 9vw, 6.5rem); line-height: 1; letter-spacing: -0.05em; }
@@ -54,8 +58,38 @@ main section { max-width: var(--max-width); margin: 0 auto; padding: 6rem 1.5rem
 .card-icon, .hobby-icon { color: var(--accent); font-size: 1.5rem; }
 .card h3 { margin-bottom: 0.65rem; }
 .tag-list { margin-top: 1.4rem; }
+.paper { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 2rem; align-items: center; padding: 2rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
+.paper-meta { margin-bottom: 0.5rem; color: var(--accent); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.85rem; }
+.paper h3 { margin-bottom: 0.35rem; font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.25; }
+.paper-authors { margin-bottom: 1.25rem; color: var(--muted); font-size: 0.9rem; }
+.paper-description { color: var(--muted); }
+.paper-links { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.5rem; }
+.button-secondary { color: var(--text); border-color: var(--border); }
+.button-secondary:hover, .button-secondary:focus-visible { background: var(--surface-hover); border-color: var(--muted); }
+.paper-figure { overflow: hidden; background: var(--background); border: 1px solid var(--border); border-radius: 9px; }
+.paper-figure img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #ffffff; }
+.paper-figure figcaption { padding: 0.8rem 1rem; color: var(--muted); font-size: 0.85rem; }
 .hobby-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.hobby-icon { display: block; margin-bottom: 1.5rem; font-size: 2rem; }
+.hobby-icon { display: block; width: 2.25rem; height: 2.25rem; margin-bottom: 1.5rem; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.hobby-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem; margin-top: 1.35rem; }
+.hobby-gallery figure { position: relative; z-index: 1; min-width: 0; }
+.hobby-gallery img { position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: 1; object-fit: cover; cursor: zoom-in; background: var(--background); border: 1px solid var(--border); border-radius: 8px; transform-origin: center; transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease; }
+.hobby-gallery img:hover { z-index: 3; border-color: var(--accent); box-shadow: 0 18px 45px rgb(0 0 0 / 45%); transform: scale(1.28); }
+.hobby-gallery figcaption { margin-top: 0.4rem; color: var(--muted); font-size: 0.75rem; line-height: 1.35; }
+
+.gallery-introduction { margin-top: -1.5rem; margin-bottom: 2rem; color: var(--muted); }
+.animal-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 210px)); justify-content: center; gap: 1.5rem; }
+.animal-photo { position: relative; z-index: 1; overflow: hidden; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; transform-origin: center; transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease; }
+.animal-photo:hover, .animal-photo:focus-within { z-index: 3; border-color: var(--accent); box-shadow: 0 18px 45px rgb(0 0 0 / 45%); transform: scale(1.28); }
+.animal-photo img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; cursor: zoom-in; background: var(--surface-hover); }
+
+.lightbox { width: min(92vw, 1100px); max-width: none; max-height: 92vh; margin: auto; padding: 0; overflow: visible; color: var(--text); background: transparent; border: 0; }
+.lightbox::backdrop { background: rgb(0 0 0 / 82%); backdrop-filter: blur(5px); }
+.lightbox img { display: block; width: 100%; max-height: 82vh; object-fit: contain; background: var(--background); border: 1px solid var(--border); border-radius: 12px; }
+.lightbox-caption { margin-top: 0.75rem; color: var(--text); text-align: center; }
+.lightbox-caption:empty { display: none; }
+.lightbox-close { position: absolute; z-index: 2; top: -1rem; right: -1rem; display: grid; width: 2.5rem; height: 2.5rem; place-items: center; color: var(--text); cursor: pointer; background: var(--surface); border: 1px solid var(--border); border-radius: 50%; font-size: 1.5rem; line-height: 1; }
+.lightbox-close:hover, .lightbox-close:focus-visible { color: var(--accent); border-color: var(--accent); }
 
 .contact { text-align: center; }
 .contact > p:not(.section-label) { max-width: 550px; margin: -1rem auto 2rem; }
@@ -66,8 +100,15 @@ footer { padding: 2rem 1.5rem; color: var(--muted); text-align: center; border-t
     .nav-links { flex-wrap: wrap; gap: 0.6rem 1rem; }
     main section { padding: 4.5rem 1.25rem; scroll-margin-top: 7rem; }
     .hero { min-height: 80vh; }
-    .cv-layout, .card-grid, .hobby-grid { grid-template-columns: 1fr; }
+    .hero-content { grid-template-columns: 1fr; }
+    .hero-copy { order: 2; }
+    .profile-picture { order: 1; width: min(70vw, 280px); box-shadow: 12px 12px 0 rgb(88 166 255 / 12%); }
+    .cv-layout, .card-grid, .paper, .hobby-grid { grid-template-columns: 1fr; }
     .cv-layout { gap: 2rem; }
+    .hobby-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .hobby-gallery img:hover { transform: scale(1.08); }
+    .animal-gallery { grid-template-columns: repeat(2, minmax(120px, 180px)); gap: 1rem; }
+    .animal-photo:hover, .animal-photo:focus-within { transform: scale(1.08); }
 }
 
 @media (prefers-reduced-motion: reduce) {
