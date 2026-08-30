@@ -66,10 +66,16 @@ main section { max-width: var(--max-width); margin: 0 auto; padding: 6rem 1.5rem
 .paper-links { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.5rem; }
 .button-secondary { color: var(--text); border-color: var(--border); }
 .button-secondary:hover, .button-secondary:focus-visible { background: var(--surface-hover); border-color: var(--muted); }
+.chess-widget { display: grid; justify-items: center; gap: 1rem; padding: 2rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+.chess-piece { color: var(--accent); font-size: clamp(3rem, 7vw, 5rem); line-height: 1; }
+.chess-copy h2 { margin-bottom: 0.4rem; font-size: clamp(1.6rem, 4vw, 2.4rem); }
+.chess-copy p { color: var(--muted); }
+.chess-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
 .paper-figure { overflow: hidden; background: var(--background); border: 1px solid var(--border); border-radius: 9px; }
 .paper-figure img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #ffffff; }
 .paper-figure figcaption { padding: 0.8rem 1rem; color: var(--muted); font-size: 0.85rem; }
 .hobby-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.hobby-grid .card > p { height: 6.4em; }
 .hobby-icon { display: block; width: 2.25rem; height: 2.25rem; margin-bottom: 1.5rem; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .hobby-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem; margin-top: 1.35rem; }
 .hobby-gallery figure { position: relative; z-index: 1; min-width: 0; }
@@ -107,8 +113,10 @@ footer { padding: 2rem 1.5rem; color: var(--muted); text-align: center; border-t
     .cv-layout { gap: 2rem; }
     .hobby-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .hobby-gallery img:hover { transform: scale(1.08); }
+    .hobby-grid .card > p { height: auto; }
     .animal-gallery { grid-template-columns: repeat(2, minmax(120px, 180px)); gap: 1rem; }
     .animal-photo:hover, .animal-photo:focus-within { transform: scale(1.08); }
+    .chess-actions { flex-direction: column; }
 }
 
 @media (prefers-reduced-motion: reduce) {
